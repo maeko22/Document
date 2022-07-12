@@ -1,0 +1,42 @@
+wget download.zextras.com/zcs-9.0.0_OSE_UBUNTU18_latest-zextras.tgz
+
+nom mail
+apt update && upgrade -y
+
+apt install ifupdown
+
+configuration interface
+
+auto enp0s3
+iface enp0s3 inet static
+address 192.168.1.160
+netmask 255.255.255.0
+gateway 192.168.1.1
+dns-nameservers 192.168.1.1 8.8.8.8
+
+apt install gpm
+
+install virtual insertion 
+cd /media/
+mkdir cdrom1
+sudo mount /dev/cdrom /media/cdrom1
+cd cdrom1
+./virtu
+reboot
+
+monter le fichier window
+sudo mount -t ubuntu /home/servermail/partage
+copier les fichier de configuration dans home/server/telechargement
+
+apt install netcat-traditional libidn11-dev libgmp10 sysstat sqlite3 libaio1 unzip pax
+service apparmor stop
+service apparmor teardown
+
+update-rc.d -f apprmor remove 
+
+enregister un instantanné
+
+
+lancer les script
+
+
